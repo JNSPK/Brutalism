@@ -2,7 +2,7 @@ import { Parallax } from 'react-scroll-parallax';
 
 const Hero = () => {
   return (
-    <div className='hero'>
+    <>
       <h1 className='hero-title'>brutalism</h1>
       <Parallax speed={-10}>
         <h2 className='hero-title2'>brutalism</h2>
@@ -27,7 +27,7 @@ const Hero = () => {
           <div className='plx-bg2'></div>
         </Parallax>
       </div>
-    </div>
+    </>
   );
 };
 
