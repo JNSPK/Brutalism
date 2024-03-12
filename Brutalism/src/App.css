@@ -1,3 +1,5 @@
+@import url('../src/css/zodiak.css');
+
 * {
   margin: 0;
   padding: 0;
@@ -22,9 +24,83 @@ html {
   grid-template-columns: 15rem 1fr;
 }
 nav {
+  font-family: CabinetGrotesk-Bold;
+  letter-spacing: 0.2rem;
   grid-area: nav;
   transition: all 0.9s ease;
   overflow: hidden;
+  height: 100vh;
+  width: 3rem;
+  background-color: #f2ff49;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid white;
+}
+.menu-title {
+  text-transform: uppercase;
+  position: absolute;
+  right: 0.5rem;
+  padding-top: 1rem;
+  color: #ff3366;
+  font-size: small;
+  display: flex;
+  gap: 1rem;
+}
+.menu-title-open {
+  text-transform: uppercase;
+  position: absolute;
+  right: 0.5rem;
+  padding-top: 1rem;
+  color: #ff3366;
+  font-size: small;
+  display: flex;
+  gap: 1rem;
+}
+.menu-title-open span {
+  animation: moveIn 0.3s linear forwards;
+}
+.menu-title-open span:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.menu-title-open span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.menu-title-open span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.menu-title-open span:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.menu-title span:nth-child(1) {
+  animation: moveOut 0.8s linear forwards;
+}
+.menu-title span:nth-child(2) {
+  animation: moveOut 0.6s linear backwards;
+}
+.menu-title span:nth-child(3) {
+  animation: moveOut 0.4s linear forwards;
+}
+.menu-title span:nth-child(4) {
+  animation: moveOut 0.2s linear forwards;
+}
+
+@keyframes moveIn {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-3rem);
+  }
+}
+@keyframes moveOut {
+  0% {
+    transform: translateX(-3rem);
+  }
+  100% {
+    transform: translateY(-2rem);
+  }
 }
 .link-container {
   justify-content: center;
@@ -57,15 +133,19 @@ nav.open a::after {
   content: '';
   transform: scaleX(0);
   border-bottom: 1px solid #333;
-
+  transition: transform 250ms ease-in-out;
   position: absolute;
   left: 0;
   bottom: 0;
 }
+nav.open a.active {
+  color: #ff3366;
+  transition: all 1s ease;
+}
 nav.open a.active::after {
   display: block;
   content: '';
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #ff3366;
   transform: scaleX(1);
   transition: transform 250ms ease-in-out;
   width: 100%;
@@ -75,7 +155,7 @@ nav.open a.active::after {
   transform-origin: 0% 50%;
 }
 nav.open a:hover {
-  color: orange;
+  color: #ff3366;
   transition: all 0.5s ease;
 }
 .container {
@@ -86,6 +166,7 @@ nav.open a:hover {
 }
 
 .hero {
+  font-family: Zodiak-Extrabold, system-ui, Avenir, Helvetica, Arial, sans-serif;
   width: 100%;
   height: calc(100vh);
   display: flex;
@@ -142,11 +223,105 @@ nav.open a:hover {
   height: 100%;
   border-left: solid 1px white;
 }
+.article {
+  display: flex;
+  width: 100%;
+  height: 95vh;
+  padding-left: 2rem;
+  border-left: solid 1px white;
+  white-space: pre-line;
+  gap: 3rem;
+}
+.article-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 50%;
+  width: 100%;
+}
 
 .article-container {
   grid-area: container;
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: center;
+  align-items: start;
+  padding-left: 5rem;
+  gap: 4rem;
+}
+.article-content {
+  overflow: scroll;
+  min-height: 2rem;
+}
+.article-image-container {
+  height: 100%;
+  min-width: 50%;
+}
+.article-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.article-credit-container {
+  align-self: end;
+  font-family: CabinetGrotesk-Light;
+  font-size: small;
+}
+
+.article-cards-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.card-container {
+  width: 33%;
+  min-width: 20rem;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+}
+h3 {
+  padding-top: 0.5rem;
+}
+.card-image-container {
+  height: 50%;
+  object-fit: cover;
+  border-bottom: 1px solid #f2ff49;
+}
+.card-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+.card-link,
+.example-link {
+  text-decoration: none;
+  color: #f2ff49;
+  transition: all 250ms ease;
+}
+.card-link:hover,
+.example-link:hover {
+  color: #ff3366;
+  transition: all 250ms ease;
+}
+.card-link:visited,
+.example-link:visited {
+  text-decoration: none;
+  color: #f2ff49;
+}
+.card-link:visited:hover,
+.example-link:visited:hover {
+  text-decoration: none;
+  color: #ff3366;
+}
+
+.example-link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }

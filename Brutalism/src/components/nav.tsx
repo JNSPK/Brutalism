@@ -8,6 +8,13 @@ type NavProps = {
 const Nav: React.FC<NavProps> = ({ state, onClick }) => {
   return (
     <nav onClick={onClick} className={state ? 'open' : ''}>
+      <div className={state ? 'menu-title-open' : 'menu-title'}>
+        {Array.from('Menu').map((letter, index) => (
+          <span key={index} className='animated-letter'>
+            {letter}
+          </span>
+        ))}
+      </div>
       <div className='link-container'>
         <Link
           activeClass='active'
