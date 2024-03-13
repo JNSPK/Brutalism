@@ -1,7 +1,11 @@
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
-import architecture from '../src/img/le-corbusier.jpg'
+import architecture from '../src/img/lecorbusier.jpg';
+import lecorbusier from '../src/img/le-corbusier.jpg';
+import breuer from '../src/img/breuer-marcel.jpg';
+import pei from '../src/img/pei.jpg';
+import raw from '../src/img/raw.jpg';
 
 const articles = [
   {
@@ -12,7 +16,7 @@ const articles = [
     The new generation embraced several precepts: first, that architecture absorbed existential weight; second, that building was the result not of reasoning but of ethical action; and finally, that International Style modernism was no more than shallow aestheticism. It was the radicalism of its approach rather than the persuasiveness of its early monuments that enabled Brutalism to force a transformation of the accepted conventions of modernism.
     
     Despite its short life as an identifiable movement, Brutalism came to occupy a central position in the redefinition of the history of 20th-century architecture.`,
-    img: '../src/img/lecorbusier.jpg',
+    img: architecture,
     credit: `Extract from : Sennott R.S. Encyclopedia of twentieth century
     architecture, Vol.1 (A-F). Fitzroy Dearborn., 2004.
 
@@ -23,7 +27,7 @@ const articles = [
     content: 'Some key artists of architectural brutalism',
     cards: [
       {
-        img: architecture,
+        img: lecorbusier,
         alt: 'Le Corbusier',
         name: 'Le Corbusier',
         description:
@@ -31,7 +35,7 @@ const articles = [
         link: 'https://en.wikipedia.org/wiki/Le_Corbusier',
       },
       {
-        img: '../src/img/breuer-marcel.jpg',
+        img: breuer,
         alt: 'Marcel Breuer',
         name: 'Marcel Breuer',
         description: `Marcel Lajos Breuer (21 May 1902 – 1 July 1981) was a Hungarian-German modernist architect and furniture designer. He moved to the United States in 1937 and became a naturalized American citizen in 1944.
@@ -39,7 +43,7 @@ const articles = [
         link: 'https://en.wikipedia.org/wiki/Marcel_Breuer',
       },
       {
-        img: '../src/img/pei.jpg',
+        img: pei,
         alt: 'Ieoh Ming Pei',
         name: 'Ieoh Ming Pei',
         description: `Ieoh Ming Pei (April 26, 1917 – May 16, 2019) was an American architect.
@@ -58,7 +62,7 @@ const articles = [
     A website is about giving visitors content to enjoy and ways to interact with you.
 
     The design guidelines outlined above—and detailed below—all are in the service of making websites more of what they are and less of what they aren't. These aren't restrictive rules to produce boring, minimalist websites. Rather these are a set of priorities that put the visitor to your site—the entire reason your website exists—front and center in all things. `,
-    img: '../src/img/raw.jpg',
+    img: raw,
     links: [
       {
         link: 'https://brutalistwebsites.com/',
