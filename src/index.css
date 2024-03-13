@@ -1,5 +1,5 @@
-@import url('../src/css/zodiak.css');
-@import url('../src/css/cabinet-grotesk.css');
+@import url('./css/zodiak.css');
+@import url('./css/cabinet-grotesk.css');
 
 :root {
   font-family: CabinetGrotesk-Regular, system-ui, Avenir, Helvetica, Arial,

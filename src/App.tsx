@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Element } from 'react-scroll';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import Article, { ArticleProps } from '../src/components/article';
-import Hero from '../src/components/hero';
-import Nav from '../src/components/nav';
 import './App.css';
+import Article, { ArticleProps } from './components/article';
+import Hero from './components/hero';
+import Nav from './components/nav';
 
 type AppProps = {
   articles: ArticleProps[];
