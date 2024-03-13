@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
+import architecture from '../src/img/le-corbusier.jpg'
 
 const articles = [
   {
@@ -22,7 +23,7 @@ const articles = [
     content: 'Some key artists of architectural brutalism',
     cards: [
       {
-        img: '../src/img/le-corbusier.jpg',
+        img: architecture,
         alt: 'Le Corbusier',
         name: 'Le Corbusier',
         description:
