@@ -1,11 +1,11 @@
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
-import './index.css';
-import architecture from '../src/img/lecorbusier.jpg';
-import lecorbusier from '../src/img/le-corbusier.jpg';
 import breuer from '../src/img/breuer-marcel.jpg';
+import lecorbusier from '../src/img/le-corbusier.jpg';
+import architecture from '../src/img/lecorbusier.jpg';
 import pei from '../src/img/pei.jpg';
 import raw from '../src/img/raw.jpg';
+import App from './App.tsx';
+import './index.css';
 
 const articles = [
   {
@@ -32,7 +32,7 @@ const articles = [
         name: 'Le Corbusier',
         description:
           'Charles-Édouard Jeanneret (6 October 1887 – 27 August 1965), known as Le Corbusier was a Swiss-French architect, designer, painter, urban planner and writer, who was one of the pioneers of what is now regarded as modern architecture',
-        link: 'https://en.wikipedia.org/wiki/Le_Corbusier',
+        link: 'https://www.theartstory.org/artist/le-corbusier/',
       },
       {
         img: breuer,
@@ -40,7 +40,7 @@ const articles = [
         name: 'Marcel Breuer',
         description: `Marcel Lajos Breuer (21 May 1902 – 1 July 1981) was a Hungarian-German modernist architect and furniture designer. He moved to the United States in 1937 and became a naturalized American citizen in 1944.
         At the Bauhaus he designed the Wassily Chair and the Cesca Chair, which The New York Times have called some of the most important chairs of the 20th century`,
-        link: 'https://en.wikipedia.org/wiki/Marcel_Breuer',
+        link: 'https://www.theartstory.org/artist/breuer-marcel/',
       },
       {
         img: pei,
@@ -49,7 +49,7 @@ const articles = [
         description: `Ieoh Ming Pei (April 26, 1917 – May 16, 2019) was an American architect.
         Born and raised in Shanghai in a Chinese family, Pei drew inspiration at an early age from the garden villas at Suzhou.
         In 1935, he moved to the United States and enrolled in the University of Pennsylvania's architecture school, but quickly transferred to the Massachusetts Institute of Technology.`,
-        link: 'https://en.wikipedia.org/wiki/I._M._Pei',
+        link: 'https://www.theartstory.org/artist/pei-i-m/',
       },
     ],
   },
